@@ -1,5 +1,6 @@
 title: Jekyll Serial Programmer
 markdown: kramdown
+baseurl: '/Coursera'
 
 # for atom feed
 author:
