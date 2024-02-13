@@ -1,1 +1,6 @@
 theme: jekyll-theme-minimal
+
+name: Testing
+markdown: redcarpet
+pygments: true
+baseurl: /Coursera
