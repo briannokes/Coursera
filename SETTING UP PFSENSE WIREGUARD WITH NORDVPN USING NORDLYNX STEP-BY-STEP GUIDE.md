@@ -17,9 +17,9 @@ Created by Brian Robert Nokes
 <h3 style="text-align: left;">Tunnel Configuration - tun_wg0</h3> 
 Enable Tunnel - check mark on
 
- Description
- 
-	WireGuard-Nordvpn
+Description
+<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard-Nordvpn
+</span>
 
  Listen Port
  
