@@ -22,8 +22,10 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Resources:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
-    - Learn markdown: "https://www.markdowntutorial.com/"
+    - Test 1 : "https://cloudflare.com"
+        - Test 3 : "https://cloudflare.com"
+            - Test 4 : "https://cloudflare.com"
+    - Test 2 : "https://1.1.1.1/help/"
   Author's home: "https://deanattali.com"
 
 ################
