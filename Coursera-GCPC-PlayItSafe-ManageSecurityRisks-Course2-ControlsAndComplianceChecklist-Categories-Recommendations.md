@@ -1,4 +1,8 @@
-
+---
+layout: page
+title: Coursera Portfolio Showcase
+subtitle: My collection of coursework showcased on Coursera, demonstrating my skills and expertise. Explore completed projects and courses to see how I'm building my professional portfolio.
+---
 
 ### Portfolio Activity: Conduct a security audit
 
