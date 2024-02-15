@@ -23,7 +23,7 @@ navbar-links:
   About Me: "aboutme"
   Coursera Portfolio Showcase:
      - Play It Safe Manage Security Risks Course 2: "CourseraGCPCPlayItSafeManageSecurityRisksCour"
-     - Test: "Coursera-GCPC-PlayItSafe-ManageSecurityRisks-Course2-ControlsAndComplianceChecklist-Categories-Recommendations.md"
+     - Test: "Coursera-GCPC-PlayItSafe-ManageSecurityRisks-Course2-ControlsAndComplianceChecklist-Categories-Recommendations"
    # - Play It Safe Manage Security Risks Course 2: "CourseraGoogleCybersecurityProfessionalCertificate/CourseraGCPCPlayItSafeManageSecurityRisksCour"
   Resources:
     - Test 1: "https://cloudflare.com"
