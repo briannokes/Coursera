@@ -23,7 +23,9 @@ navbar-links:
   About Me: "aboutme"
   Resources:
     - Test 1: "https://cloudflare.com"
+    Test:
         - Test 3: "https://cloudflare.com"
+        Testing2:
             - Test 4: "https://cloudflare.com"
     - Test 2: "https://1.1.1.1/help/"
   Author's home: "https://deanattali.com"
