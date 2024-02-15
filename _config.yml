@@ -22,7 +22,7 @@ author: Some Person
 navbar-links:
   About Me: "aboutme"
   Coursera Portfolio Showcase:
-    - Play It Safe Manage Security Risks Course 2: "CourseraGoogleCybersecurityProfessionalCertificate/CourseraGCPCPlayItSafeManageSecurityRisksCour.html"
+    - Play It Safe Manage Security Risks Course 2: "CourseraGoogleCybersecurityProfessionalCertificate/CourseraGCPCPlayItSafeManageSecurityRisksCour"
   Resources:
     - Test 1: "https://cloudflare.com"
     - Test 2: "https://1.1.1.1/help/"
