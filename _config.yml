@@ -21,14 +21,6 @@ author: Some Person
 
 navbar-links:
   About Me: "aboutme"
-    - title: "Collections"
-    sublinks:
-      - title: Docker
-        url: /docker/
-      - title: Kubernetes
-        url: /kubernetes/
-      - title: OpenStack
-        url: /openstack/
   Resources:
     - Test 1: "https://cloudflare.com"
     - Test 2: "https://1.1.1.1/help/"
