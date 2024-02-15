@@ -1,116 +1,96 @@
----
-layout: page
-title: SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE 
-subtitle: Created by Brian Robert Nokes 2023
----
+# [[Website Creation - SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE]]
 
-<h1 style="text-align: center;">SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE</h1> 
 
-<h3 style="text-align: left;"> Thank you for taking the time to explore this comprehensive guide. I've invested significant effort into its creation, aiming to provide you with detailed and valuable insights. I trust that you will find it helpful and worthy of sharing with others.  </h3>
+[Setting Up pfSense WireGuard with NordVPN Using NordLynx Step-by-Step Guide](https://sites.google.com/view/nordvpn-wireguard-pfsense/home)
+
+<h1 style="text-align: center;"># SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE</h1> 
+
+Thank you for taking the time to explore this comprehensive guide. I've invested significant effort into its creation, aiming to provide you with detailed and valuable insights. I trust that you will find it helpful and worthy of sharing with others.  
+  
 Created by Brian Robert Nokes
 
-<h5 style="text-align: left;"> The first thing In pfSense, is to navigate to the VPN then WireGuard. Then create a Tunnel. </h5>
+## The first thing In pfSense, is to navigate to the VPN then WireGuard. Then create a Tunnel. 
 
-<h1 style="text-align: left;"> Step 1</h1>
+# Step 1
 
-<h5 style="text-align: left;">VPN/WireGuard/Tunnels</h5>
-<h3 style="text-align: left;">Tunnel Configuration - tun_wg0</h3> 
-Enable Tunnel - check mark on
+###### VPN/WireGuard/Tunnels
+
+### Tunnel Configuration - tun_wg0
+	Enable Tunnel - check mark on
 
  Description
- 
 	WireGuard-Nordvpn
 
  Listen Port
- 
 	51820
 
  Interface Keys
- 
 	 Private key from NordVPN content which goes into Private key for this tunnel. (Required)
-	 
 PrivateKey
-
 	Your Private Key info here
-	
-<h2 style="text-align: left;">Save</h2>
+## Save
 
+# Step 2
 
-<h1 style="text-align: left;">Step 2</h1>
-<h5 style="text-align: left;">Interfaces/Interface Assignments</h5> 
- 
+ Interfaces/Interface Assignments
 	 Interfaces
 
 create WG_NordVPN_nordlynx (tun_wg0)
 
- <h3 style="text-align: left;">General Configuration</h3>
+#### General Configuration 
 
 Enable - Check mark on
 
  Description
- 
 	WG_NordVPN_nordlynx
 
  IPv4
- 
 	Static IPv4
 
  IPv4 Address
- 
 	10.5.0.2 /32 - pick anything that you don't have or someone else may not or just keep what NordVPN uses
 
  IPv4 Upstream gateway
- 
 	Selecting an upstream gateway causes the firewall to treat this interface as a WAN-type interface. 
 
 This is a WAN-type interface NordVPN WG_NordVPN_nordlynxGW - 10.5.0.2
+## Save
 
-<h2 style="text-align: left;">Save</h2>
+# Step 3
 
-<h1 style="text-align: left;">Step 3</h1>
- <h5 style="text-align: left;">/VPN/WireGuard/Peers</h5>
+###### /VPN/WireGuard/Peers
 
-<h3 style="text-align: left;">Peers Configuration</h3>
+### Peers Configuration
 
 Enable Peer - check mark on
 
- Tunnel
- 
+ Tunnel 
 	 tun_wg0
 
  Description
- 
 	 WireGuard-Nordvpn
 
  Dynamic Endpoint
- 
 	 Uncheck this option - to assign NordVPN endpoint address and port for this peer, this needs to be off - no check mark
 
  Endpoint
- 
 	 The Hostname will change when you need a new server
 
 Hostname
-
-	usXXXX.nordvpn.com 
-	 
+	usXXXX.nordvpn.com  
 		When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " "usXXXX.nordvpn.com" - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com
 
 Port
-
 	51820
 
  Public Key - From nordvpn peer content
- 
 	Public Key
 
 Public Key from NordVPN peer content here 
-
 	 Pre-shared Key - Leave blank - optional
-	 
 	NA - no Generate
 
-<h3 style="text-align: left;"></h3>  Address Configuration
+### Address Configuration
 
 Allowed IPs 
 	0.0.0.0 / 0
@@ -118,10 +98,10 @@ Allowed IPs 
 Description
 	us8258.nordvpn.com:51820
 		When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " usXXXX.nordvpn.com:51820 - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 4
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  System / Routing / Gateways 
+# Step 4
+###### System / Routing / Gateways 
 
 now create your Gateway for nordvpn
 
@@ -143,11 +123,11 @@ Monitor IP
 Description
 	WireGuard-Nordvpn lynx
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 5
+# Step 5
 When putting it on a VLAN or network
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/NAT/Outbound
+###### Firewall/NAT/Outbound
 	Mappings
 	
 Create / Add a new one
@@ -168,15 +148,15 @@ Destination
 	Type
 		Any
 
-<h2 style="text-align: left;"></h2>  Translation
+## Translation
 
 Address
 	WG_NORDVPN_NORDLYNX address
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 6
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Rules
+# Step 6
+###### Firewall/Rules
 	WAN
 
 Action
@@ -188,11 +168,11 @@ Interface
 Protocol
 	UDP
 
-<h3 style="text-align: left;"></h3>  Source
+### Source
 Source
 	Any
 
-<h3 style="text-align: left;"></h3>  Destination
+### Destination
 Destination
 	WG_NORDVPN_NORDLYNX address
 		This is your interface that you created for the NordVPN WireGuard
@@ -210,15 +190,15 @@ Destination Port Range
 Description
 	Allow WireGuard - 51820
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 7
+# Step 7
 
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Rules
+###### Firewall/Rules
 	WG_NORDVPN_NORDLYNX
 Create / Add new Rule
 
-<h3 style="text-align: left;"></h3>  Edit Firewall Rule
+### Edit Firewall Rule
 
 Action
 	Pass
@@ -228,20 +208,20 @@ Interface
 
 Protocol
 	Any
-<h3 style="text-align: left;"></h3>  Source
+### Source
 Source
 	Any
-<h3 style="text-align: left;"></h3>  Destination
+### Destination
 Destination
 	Any
 
 Description
 	Allow All Traffic for WG VPN
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 8
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Rules
+# Step 8
+###### Firewall/Rules
 	WireGuard
 
 Action
@@ -255,20 +235,20 @@ Address Family
 
 Protocol
 	Any
-<h3 style="text-align: left;"></h3>  Source
+### Source
 Source
 	Any
-<h3 style="text-align: left;"></h3>  Destination
+### Destination
 Destination
 	Any
 
 Description
 	Pass VPN traffic from WireGuard peers
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 9
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Aliases
+# Step 9
+###### Firewall/Aliases
 
 Create / Add new Aliases
 
@@ -284,10 +264,10 @@ Type
 			176.176.176.0 / 29
 				Interface name here
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 10
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Rules
+# Step 10
+###### Firewall/Rules
 
 Whatever your network name is that's what this is
 	WG_NORDVPN_NORDLYNX
@@ -313,7 +293,7 @@ Destination
 Description
 	Allow only VLAN/Network IP's to be routed over NordVPN lynx
 
-<h3 style="text-align: left;"></h3>  Advanced Options
+### Advanced Options
 
 Tag
 	NordVPN_WG_Kill_Switch_Tag
@@ -328,10 +308,10 @@ State Type
 Gateway
 	WG_NordVPN_nordlynxGW - 10.5.0.2
 
-<h2 style="text-align: left;"></h2>  Save
+## Save
 
-<h1 style="text-align: left;"></h1> Step 11
-<h3 style="text-align: left;"></h3> <h3 style="text-align: left;"></h3>  Firewall/Rules/Floating
+# Step 11
+###### Firewall/Rules/Floating
 
 Create / Add a new Floating
 
@@ -347,7 +327,7 @@ Direction
 Protocol
 	Any
 
-<h3 style="text-align: left;"></h3>  Source
+### Source
 Source - pick your Alias
 	Address or Alias
 		Route_Out_Over_NordVPN_lynx
@@ -357,7 +337,7 @@ Destination
 Description
 	Route only via NordVPN lynx
 
-<h3 style="text-align: left;"></h3>  Advanced Options
+### Advanced Options
 
 Tag
 	Leave empty
@@ -372,4 +352,4 @@ State Type
 Gateway
 	WG_NordVPN_nordlynxGW - 10.5.0.2
 		If this is default then you can use Direction any, but if you want to use WG_NordVPN then you will have to use a Direction In/Out
-<h2 style="text-align: left;"></h2>  Save
+## Save
