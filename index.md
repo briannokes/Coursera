@@ -1,5 +1,7 @@
 ---
 layout: home
-title: Test
-subtitle: This is where I will tell my friends way too much about me
+title: Coursera Portfolio Showcase
+subtitle: 
 ---
+
+I just completed my first section of Google Cybersecurity Professional Certificate - Foundations of Cybersecurity. Now I am going on to the next part. Here is my Cert. [here](https://coursera.org/verify/AQM35Z3XBGM2).
