@@ -3,11 +3,9 @@ layout: page
 title: PFSENSE WIREGUARD USING NORDLYNX GUIDE 
 subtitle: Created by Brian Robert Nokes 2023
 ---
-<h1 style="text-align: center;">SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE</h1><span style="display:block; background-color:red; width:100%; height:2px;"></span>
+<h1 style="text-align: center;">SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE</h1>
 
 <h4 style="text-align: left;">Thank you for taking the time to explore this comprehensive guide. I've invested significant effort into its creation, aiming to provide you with detailed and valuable insights. I trust that you will find it helpful and worthy of sharing with others.</h4>
-
-
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
@@ -24,9 +22,9 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="display: inline-block; margin: 0 50px 0 50px">51820</span>
 <br><br>
 <span style="text-align: left;">Interface Keys</span><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">Private key from NordVPN content which goes into Private key for this tunnel. (Required)</span>
-<br>
-<span style="display: inline-block; margin: 0 50px 0 50px">PrivateKey -<span style="display: inline-block; margin: 0 50px 0 50px">Your Private Key info here</span>
+<span style="display: inline-block; margin: 0 50px 0 50px">Private key from NordVPN content which goes into Private key for this tunnel. (Required)</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">PrivateKey</span><br>
+<span style="display: inline-block; margin: 0 50px 0 90px">Your Private Key info here</span>
 <br><br>
 <h2 style="text-align: left;">Save</h2>
 
@@ -83,7 +81,7 @@ subtitle: Created by Brian Robert Nokes 2023
 <br><br>
 <span style="text-align: left;">Public Key - From nordvpn peer content</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">Public Key</span><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">Public Key from NordVPN peer content here</span>
+<span style="display: inline-block; margin: 0 50px 0 70px">Public Key from NordVPN peer content here</span>
 <br><br>
 <span style="text-align: left;">Pre-shared Key - Leave blank - optional</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">NA - no Generate</span>
@@ -104,7 +102,8 @@ subtitle: Created by Brian Robert Nokes 2023
 
 <h1 style="text-align: left;">Step 4</h1>
 <h3 style="text-align: left;">System/Routing/Gateways</h3>
-<span style="text-align: left;">now create your Gateway for nordvpn</span><br>
+<span style="text-align: left;">now create your Gateway for nordvpn</span>
+<br><br>
 <span style="text-align: left;">Interface</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span>
 <br><br>
@@ -129,7 +128,8 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 5</h1>
-<span style="text-align: left;">When putting it on a VLAN or network</span><br>
+<span style="text-align: left;">When putting it on a VLAN or network</span>
+<br><br>
 <h5 style="text-align: left;">Firewall/NAT/Outbound</h5>
 <span style="display: inline-block; margin: 0 50px 0 50px">Mappings</span>
 <br><br>
@@ -152,219 +152,234 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="display: inline-block; margin: 0 50px 0 70px">Any</span><br>
 <h2 style="text-align: left;">Translation</h2><br>
 <span style="text-align: left;">Address</span><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX address
-
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX address</span>
+<br><br>
+<h2 style="text-align: left;">Misc</h2><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Mapping - NOrdVPN Lynx to VLAN - Network</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
-<h1 style="text-align: left;"></h1> Step 6
-<h5 style="text-align: left;"></h5>Firewall/Rules
-<span style="display: inline-block; margin: 0 50px 0 50px">WAN
-
-Action
-<span style="display: inline-block; margin: 0 50px 0 50px">Pass
-
-Interface
-<span style="display: inline-block; margin: 0 50px 0 50px">WAN
-
-Protocol
-<span style="display: inline-block; margin: 0 50px 0 50px">UDP
-
-<h3 style="text-align: left;"></h3>  Source
-Source
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-<h3 style="text-align: left;"></h3>  Destination
-Destination
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX address
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">This is your interface that you created for the NordVPN WireGuard
-
-Destination Port Range
-<span style="display: inline-block; margin: 0 50px 0 50px"> From
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px"> Other
-<span style="display: inline-block; margin: 0 50px 0 50px">Custom
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">51820
-<span style="display: inline-block; margin: 0 50px 0 50px">To
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Other
-<span style="display: inline-block; margin: 0 50px 0 50px">Custom
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">51820
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Allow WireGuard - 51820
+<h1 style="text-align: left;">Step 6</h1>
+<h5 style="text-align: left;">Firewall/Rules</h5>
+<span style="display: inline-block; margin: 0 50px 0 50px">WAN</span>
+<br><br>
+<span style="text-align: left;">Action</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Pass</span>
+<br><br>
+<span style="text-align: left;">Interface</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WAN</span>
+<br><br>
+<span style="text-align: left;">Protocol</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">UDP</span>
+<br><br>
+<h3 style="text-align: left;">Source</h3>
+<span style="text-align: left;">Source</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<h3 style="text-align: left;">Destination</h3>
+<span style="text-align: left;">Destination</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX address</span>
+<br><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">This is your interface that you created for the NordVPN WireGuard</span>
+<br><br>
+<span style="text-align: left;">Destination Port Range</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">From</span>
+<br>
+<span style="display: inline-block; margin: 0 50px 0 70px">Other</span><br>
+<span style="display: inline-block; margin: 0 50px 0 90px">Custom</span><br>
+<span style="display: inline-block; margin: 0 50px 0 110px">51820</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">To</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">Other</span><br>
+<span style="display: inline-block; margin: 0 50px 0 90px">Custom</span><br>
+<span style="display: inline-block; margin: 0 50px 0 110px">51820</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Allow WireGuard - 51820</span>
+<br><br>
 
 <h2 style="text-align: left;">Save</h2>
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 7</h1>
-
-<h5 style="text-align: left;"></h5>Firewall/Rules
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX
-Create / Add new Rule
-
-<h3 style="text-align: left;"></h3>  Edit Firewall Rule
-
-Action
-<span style="display: inline-block; margin: 0 50px 0 50px">Pass
-
-Interface
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX
-
-Protocol
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-<h3 style="text-align: left;"></h3>  Source
-Source
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-<h3 style="text-align: left;"></h3>  Destination
-Destination
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Allow All Traffic for WG VPN
-
+<h5 style="text-align: left;">Firewall/Rules</h5>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span>
+<br><br>
+<span style="text-align: left;">Create / Add new Rule</span>
+<br>
+<h3 style="text-align: left;">Edit Firewall Rule</h3>
+<span style="text-align: left;">Action</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Pass</span>
+<br><br>
+<span style="text-align: left;">Interface</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span>
+<br><br>
+<span style="text-align: left;">Protocol</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span><br>
+<h3 style="text-align: left;">Source</h3>
+<span style="text-align: left;">Source</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<h3 style="text-align: left;">Destination</h3>
+<span style="text-align: left;">Destination</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Allow All Traffic for WG VPN</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 8</h1>
 <h5 style="text-align: left;">Firewall/Rules</h5>
-<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard
-
-Action
-<span style="display: inline-block; margin: 0 50px 0 50px">Pass
-
-Interface
-<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard
-
-Address Family
-<span style="display: inline-block; margin: 0 50px 0 50px">IPv4
-
-Protocol
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-<h3 style="text-align: left;"></h3>  Source
-Source
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-<h3 style="text-align: left;"></h3>  Destination
-Destination
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Pass VPN traffic from WireGuard peers
-
+<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard</span>
+<br><br>
+<span style="text-align: left;">Action</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Pass</span>
+<br><br>
+<span style="text-align: left;">Interface</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard</span>
+<br><br>
+<span style="text-align: left;">Address Family</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">IPv4</span>
+<br><br>
+<span style="text-align: left;">Protocol</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<h3 style="text-align: left;">Source</h3>
+<span style="text-align: left;">Source</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<h3 style="text-align: left;">Destination</h3>
+<span style="text-align: left;">Destination</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Pass VPN traffic from WireGuard peers</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 9</h1>
 <h5 style="text-align: left;">Firewall/Aliases</h5>
 
-Create / Add new Aliases
-
-Name
-<span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx
-
-Type
-<span style="display: inline-block; margin: 0 50px 0 50px">Network(s)
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Network or FQDN - You can add this to however many networks you need to add this VPN to. I am just using this one VLAN network I created in this example.
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">176.176.176.0 / 29
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Interface name here
-
+<span style="text-align: left;">Create / Add new Aliases</span>
+<br><br>
+<span style="text-align: left;">Name</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx</span>
+<br><br>
+<span style="text-align: left;">Type</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Network(s)</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">Network or FQDN - You can add this to however many networks you need to add this VPN to. I am just using this one VLAN network I created in this example.</span><br>
+<span style="display: inline-block; margin: 0 50px 0 90px">176.176.176.0 / 29</span><br>
+<span style="display: inline-block; margin: 0 50px 0 110px">Interface name here</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 10</h1>
 <h5 style="text-align: left;">Firewall/Rules</h5>
 
-Whatever your network name is that's what this is
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX
-<span style="display: inline-block; margin: 0 50px 0 50px">go to the interface that you are going to have this NordVPN go to, and add a rule(s)
-
-Action
- Pass
-
-Interface
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX
-<span style="display: inline-block; margin: 0 50px 0 50px">Interface name here
-
-Protocol
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-Source - pick your Alias
-<span style="display: inline-block; margin: 0 50px 0 50px">Address or Alias
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx
-
-Destination
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Allow only VLAN/Network IP's to be routed over NordVPN lynx
-
+<span style="text-align: left;">Whatever your network name is, that is what this is</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">go to the interface that you are going to have this NordVPN go to, and add a rule(s)</span>
+<br><br>
+<span style="text-align: left;">Action</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Pass</span>
+<br><br>
+<span style="text-align: left;">Interface</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">Interface name here</span>
+<br><br>
+<span style="text-align: left;">Protocol</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<span style="text-align: left;">Source - pick your Alias</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Address or Alias</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx</span>
+<br><br>
+<span style="text-align: left;">Destination</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Allow only VLAN/Network IP's to be routed over NordVPN lynx</span>
+<br><br>
 <h3 style="text-align: left;">Advanced Options</h3>
-
-Tag
-<span style="display: inline-block; margin: 0 50px 0 50px">NordVPN_WG_Kill_Switch_Tag
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">This Tag is the same as Step 11 Tagged text. You can name this anything just make sure that you have it the same as Step 11
-
-Tagged
-<span style="display: inline-block; margin: 0 50px 0 50px">empty
-
-State Type
-<span style="display: inline-block; margin: 0 50px 0 50px">Keep
-
-Gateway
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NordVPN_nordlynxGW - 10.5.0.2
-
+<span style="text-align: left;">Tag</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">NordVPN_WG_Kill_Switch_Tag</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">This Tag is the same as Step 11 Tagged text. You can name this anything just make sure that you have it the same as Step 11</span>
+<br><br>
+<span style="text-align: left;">Tagged</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">empty</span>
+<br><br>
+<span style="text-align: left;">State Type</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Keep</span>
+<br><br>
+<span style="text-align: left;">Gateway</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NordVPN_nordlynxGW - 10.5.0.2</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 11</h1>
 <h5 style="text-align: left;">Firewall/Rules/Floating</h5>
-
-Create / Add a new Floating
-
-Action
-<span style="display: inline-block; margin: 0 50px 0 50px">Block
-
- Interface
-<span style="display: inline-block; margin: 0 50px 0 50px"> WAN
-
-Direction
-<span style="display: inline-block; margin: 0 50px 0 50px">out
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">if you are going to use gateway under Advanced Options nordvpn then this should be out, if you are going to use gateway default then this can be any
-Protocol
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
+<span style="text-align: left;">Create / Add a new Floating</span>
+<br><br>
+<span style="text-align: left;">Action</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Block</span>
+<br><br>
+<span style="text-align: left;">Interface</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WAN</span>
+<br><br>
+<span style="text-align: left;">Direction</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">out</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">if you are going to use gateway under Advanced Options nordvpn then this should be out, if you are going to use gateway default then this can be any</span>
+<br><br>
+<span style="text-align: left;">Protocol</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
 <h3 style="text-align: left;">Source</h3>
-Source - pick your Alias
-<span style="display: inline-block; margin: 0 50px 0 50px">Address or Alias
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">Route_Out_Over_NordVPN_lynx
-Destination
-<span style="display: inline-block; margin: 0 50px 0 50px">Any
-
-Description
-<span style="display: inline-block; margin: 0 50px 0 50px">Route only via NordVPN lynx
-
+<span style="text-align: left;">Source - pick your Alias</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">Address or Alias</span><br>
+<span style="display: inline-block; margin: 0 50px 0 90px">Route_Out_Over_NordVPN_lynx</span>
+<br><br>
+<span style="text-align: left;">Destination</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Route only via NordVPN lynx</span>
+<br><br>
 <h3 style="text-align: left;">Advanced Options</h3>
-
-Tag
-<span style="display: inline-block; margin: 0 50px 0 50px">Leave empty
-
-Tagged
-<span style="display: inline-block; margin: 0 50px 0 50px">NordVPN_WG_Kill_Switch_Tag
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">This Tagged is the same as Step 10 Tag text. You can name this anything just make sure that you have it the same as Step 10 
-
-State Type
-<span style="display: inline-block; margin: 0 50px 0 50px">Keep
-
-Gateway
-<span style="display: inline-block; margin: 0 50px 0 50px">WG_NordVPN_nordlynxGW - 10.5.0.2
-<span style="display: inline-block; margin: 0 50px 0 50px"><span style="display: inline-block; margin: 0 50px 0 50px">If this is default then you can use Direction any, but if you want to use WG_NordVPN then you will have to use a Direction In/Out
+<span style="text-align: left;">Tag</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Leave empty</span>
+<br><br>
+<span style="text-align: left;">Tagged</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">NordVPN_WG_Kill_Switch_Tag</span><br>
+<span style="display: inline-block; margin: 0 50px 0 70px">This Tagged is the same as Step 10 Tag text. You can name this anything just make sure that you have it the same as Step 10</span>
+<br><br>
+<span style="text-align: left;">State Type</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Keep</span>
+<br><br>
+<span style="text-align: left;">Gateway</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NordVPN_nordlynxGW - 10.5.0.2</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">If this is default then you can use Direction any, but if you want to use WG_NordVPN then you will have to use a Direction In/Out</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
