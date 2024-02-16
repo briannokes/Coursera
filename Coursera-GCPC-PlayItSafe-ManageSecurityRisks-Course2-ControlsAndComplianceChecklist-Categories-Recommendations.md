@@ -235,6 +235,8 @@ A controls assessment involves closely reviewing an organization’s existing as
 |  | X | Account Management Policies |
 |  | X | Separation of duties                           |
 
+<br>
+
 | Yes | No | Technical Controls |
 | :--: | :--: | ---- |
 | X |  | Firewall |
@@ -244,6 +246,8 @@ A controls assessment involves closely reviewing an organization’s existing as
 |  | X | Password Management |
 | X |  | Antivirus (AV) Software |
 | X |  | Manual Monitoring, Maintenance, and Intervention <br>Human Required Legacy systems |
+
+<br>
 
 | Yes | No | Physical/Operational Controls |
 | :--: | :--: | ---- |
@@ -255,7 +259,10 @@ A controls assessment involves closely reviewing an organization’s existing as
 | X |  | Locks - Warehouse, Storefront, and Offices of Products |
 | X |  | Fire Detection and Prevention (fire alarm, sprinkler system, etc.) |
 
+<br>
+
 ---
+
 <h3 style="text-align: center;">System and Organizations Controls (SOC type 1, SOC type 2)</h3>
 The American Institute of Certified Public Accountants® (AICPA) auditing standards board developed this standard. The SOC1 and SOC2 are a series of reports that focus on an organization's user access policies at different organizational levels such as Associate, Supervisor, Manager, Executive, Vendor, and Others.
 
@@ -299,6 +306,7 @@ CIS is a nonprofit with multiple areas of emphasis. It provides a set of control
 ---
 <h1 style="text-align: center;">Control Categories</h1>
 #### Administrative/Managerial Controls
+<br>
 
 | Control Name | Control Type | Control Purpose | Requires Execution | Urgency |
 | ---- | ---- | ---- | ---- | ---- |
@@ -308,7 +316,10 @@ CIS is a nonprofit with multiple areas of emphasis. It provides a set of control
 | Access control policies | Preventative | Bolster confidentiality and integrity by defining which groups can access or modify data. CIA.<br><br>Protection, like encryption, safeguards data from being tampered with. <br><br>Accessible to those who are authorized to access the data. | Yes | Medium |
 | Account management policies | Preventative | Managing account lifecycle, reducing attack surface, and limiting the overall impact from disgruntled former employees and default account usage.<br><br>Minimize attack surface area.<br><br>Security assessment and testing, security operations, and software development security. IAM. | Yes | Medium |
 | Separation of duties | Preventative | Reduce risk and overall impact of malicious insider or compromised accounts.<br><br>Separation of duties: Critical actions should rely on multiple people, each of whom follows the principle of least privilege.<br><br>Prevent individuals from carrying out fraudulent or illegal activities. | Yes | Medium |
+
+<br>
 ### Technical Controls
+<br>
 
 | Control Name | Control Type | Control Purpose | Requires Execution | Urgency |
 | ---- | ---- | ---- | ---- | ---- |
@@ -319,7 +330,10 @@ CIS is a nonprofit with multiple areas of emphasis. It provides a set of control
 | Password management | Preventative | Reduce password fatigue | Yes | Low |
 | Antivirus (AV) software | Corrective | Detect and quarantine known threats | No | Low |
 | Manual monitoring, maintenance, and intervention | Preventative | Necessary to identify and manage threats, risks, or vulnerabilities to out-of-date systems | Yes | High |
+
+<br>
 ### Physical/Operational Controls
+<br>
 
 | Control Name | Control Type | Control Purpose | Requires Execution | Urgency |
 | ---- | ---- | ---- | ---- | ---- |
