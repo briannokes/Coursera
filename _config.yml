@@ -23,13 +23,6 @@ navbar-links:
   About Me: "aboutme"
   Coursera Portfolio Showcase:
      - Play It Safe Manage Security Risks Course 2: "CourseraGCPCPlayItSafeManageSecurityRisksCour"
-     - Test: "Coursera-GCPC-PlayItSafe-ManageSecurityRisks-Course2-ControlsAndComplianceChecklist-Categories-Recommendations"
-   # - Play It Safe Manage Security Risks Course 2: "CourseraGoogleCybersecurityProfessionalCertificate/CourseraGCPCPlayItSafeManageSecurityRisksCour"
-  Step-by-Step Guide:
-    - SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE: "SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE"
-"About ":
-   - Me: "about/me"
-   - Software: "about/software"
 # Author's home: "https://deanattali.com"
 
 ################
