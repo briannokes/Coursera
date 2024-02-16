@@ -7,95 +7,77 @@ subtitle: Created by Brian Robert Nokes 2023
 
 <h4 style="text-align: left;">Thank you for taking the time to explore this comprehensive guide. I've invested significant effort into its creation, aiming to provide you with detailed and valuable insights. I trust that you will find it helpful and worthy of sharing with others.</h4>
 
-<h5 style="text-align: left;"> The first thing In pfSense, is to navigate to the VPN then WireGuard. Then create a Tunnel. </h5>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
-<h1 style="text-align: left;"> Step 1</h1>
 
+<h1 style="text-align: left;">Step 1</h1>
 <h5 style="text-align: left;">VPN/WireGuard/Tunnels</h5>
-<h3 style="text-align: left;">Tunnel Configuration - tun_wg0</h3> 
-Enable Tunnel - check mark on
-
-<p>Description</p>
-<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard-Nordvpn
-</span>
-
- Listen Port
- 
-	51820
-
- Interface Keys
- 
-	 Private key from NordVPN content which goes into Private key for this tunnel. (Required)
-	 
-PrivateKey
-
-	Your Private Key info here
-	
+<h2 style="text-align: left;">The first thing In pfSense, is to navigate to the VPN then WireGuard. Then create a Tunnel.</h2>
+<h3 style="text-align: left;">Tunnel Configuration - tun_wg0</h3>
+<span style="text-align: left;">Enable Tunnel - check mark on</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard-Nordvpn</span>
+<br><br>
+<span style="text-align: left;">Listen Port</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">51820</span>
+<br><br>
+<span style="text-align: left;">Interface Keys</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Private key from NordVPN content which goes into Private key for this tunnel. (Required)</span>
+<br>
+<span style="display: inline-block; margin: 0 50px 0 50px">PrivateKey -	Your Private Key info here</span>
+<br><br>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 2</h1>
-<h5 style="text-align: left;">Interfaces/Interface Assignments</h5> 
- 
-	 Interfaces
+<h5 style="text-align: left;">Interfaces/Interface Assignments</h5><br>
+<span style="text-align: left;">Interfaces</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">create WG_NordVPN_nordlynx (tun_wg0)</span>
+<br><br>
+<h3 style="text-align: left;">General Configuration</h3>
 
-create WG_NordVPN_nordlynx (tun_wg0)
-
- <h3 style="text-align: left;">General Configuration</h3>
-
-Enable - Check mark on
-
- Description
- 
-	WG_NordVPN_nordlynx
-
- IPv4
- 
-	Static IPv4
-
- IPv4 Address
- 
-	10.5.0.2 /32 - pick anything that you don't have or someone else may not or just keep what NordVPN uses
-
- IPv4 Upstream gateway
- 
-	Selecting an upstream gateway causes the firewall to treat this interface as a WAN-type interface. 
-
-This is a WAN-type interface NordVPN WG_NordVPN_nordlynxGW - 10.5.0.2
-
+<span style="text-align: left;">Enable - Check mark on</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WG_NordVPN_nordlynx</span>
+<br><br>
+<span style="text-align: left;">IPv4</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">Static IPv4</span>
+<br><br>
+<span style="text-align: left;">IPv4 Address</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">10.5.0.2 /32 - pick anything that you don't have or someone else may not or just keep what NordVPN uses IPv4 Upstream gateway Selecting an upstream gateway causes the firewall to treat this interface as a WAN-type interface. This is a WAN-type interface NordVPN WG_NordVPN_nordlynxGW - 10.5.0.2</span>
 <h2 style="text-align: left;">Save</h2>
+
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
+
 <h1 style="text-align: left;">Step 3</h1>
- <h5 style="text-align: left;">/VPN/WireGuard/Peers</h5>
-
+<h5 style="text-align: left;">VPN/WireGuard/Peers</h5>
 <h3 style="text-align: left;">Peers Configuration</h3>
-
-Enable Peer - check mark on
-
- Tunnel
- 
-	 tun_wg0
-
- Description
- 
-	 WireGuard-Nordvpn
-
- Dynamic Endpoint
- 
-	 Uncheck this option - to assign NordVPN endpoint address and port for this peer, this needs to be off - no check mark
+<span style="text-align: left;">Enable Peer - check mark on</span>
+<br><br>
+<span style="text-align: left;">Tunnel</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">tun_wg0</span>
+<br><br>
+<span style="text-align: left;">Description</span><br>
+<span style="display: inline-block; margin: 0 50px 0 50px">WireGuard-Nordvpn</span>
+<br><br>
+<span style="text-align: left;">Dynamic Endpoint</span>
+<span style="display: inline-block; margin: 0 50px 0 50px">Uncheck this option - to assign NordVPN endpoint address and port for this peer, this needs to be off - no check mark</span>
+<br><br>
 
  Endpoint
  
 	 The Hostname will change when you need a new server
 
 Hostname
+usXXXX.nordvpn.com 
 
-	usXXXX.nordvpn.com 
-	 
-		When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " "usXXXX.nordvpn.com" - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com
+When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " "usXXXX.nordvpn.com" - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com
 
 Port
 
@@ -123,7 +105,7 @@ Description
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 <h1 style="text-align: left;">Step 4</h1>
-<h3 style="text-align: left;">System / Routing / Gateways</h3>
+<h3 style="text-align: left;">System/Routing/Gateways</h3>
 
 now create your Gateway for nordvpn
 
