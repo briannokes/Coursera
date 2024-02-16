@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: default
 title: Controls And Compliance Checklist 
 subtitle: With Categories and Recommendations
 ---
