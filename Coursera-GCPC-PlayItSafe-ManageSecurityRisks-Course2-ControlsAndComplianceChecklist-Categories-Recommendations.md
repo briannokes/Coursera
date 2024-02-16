@@ -1,11 +1,14 @@
 ---
 layout: default
-title: Controls And Compliance Checklist 
-subtitle: With Categories and Recommendations
+title:  
+subtitle: 
 ---
+<h1 style="text-align: Center;">Controls And Compliance Checklist</h1>
 
+<h3 style="text-align: center;">With Categories and Recommendations</h3>
 <br>
-<h3 style="text-align: center;">Portfolio Activity: Conduct a security audit</h3>
+<br>
+<h3 style="text-align: left;">Portfolio Activity: Conduct a security audit</h3>
 
 To pass this course item, you must complete the activity and receive at least 80%, or 4 out of 5 points, on the questions that follow. Once you have completed the activity and questions, review the feedback provided.
 
