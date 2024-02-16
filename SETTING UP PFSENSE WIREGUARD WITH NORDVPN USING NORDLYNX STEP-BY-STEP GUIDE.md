@@ -4,7 +4,8 @@ title: PFSENSE WIREGUARD USING NORDLYNX GUIDE
 subtitle: Created by Brian Robert Nokes 2023
 ---
 <h1 style="text-align: center;">SETTING UP PFSENSE WIREGUARD WITH NORDVPN USING NORDLYNX STEP-BY-STEP GUIDE</h1>
-
+<br>
+<span style="display:block; background-color:red; width:100%; height:2px;"></span>
 <h4 style="text-align: left;">Thank you for taking the time to explore this comprehensive guide. I've invested significant effort into its creation, aiming to provide you with detailed and valuable insights. I trust that you will find it helpful and worthy of sharing with others.</h4>
 <br>
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
@@ -74,7 +75,7 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="text-align: left;">Hostname</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">usXXXX.nordvpn.com</span>
 <br><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " "usXXXX.nordvpn.com" - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com</span>
+<span style="text-align: left;">When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " "usXXXX.nordvpn.com" - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com</span>
 <br><br>
 <span style="text-align: left;">Port</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">51820</span>
@@ -93,7 +94,7 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="text-align: left;">Description</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">us8258.nordvpn.com:51820</span>
 <br><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " usXXXX.nordvpn.com:51820 - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com</span>
+<span style="text-align: left;">When you see XXXX you need these numbers from nordvpn website server and find what is best but for now, if you want you can use this one for " us8258.nordvpn.com ', and you can use this one for " uk1818.nordvpn.com " usXXXX.nordvpn.com:51820 - change the XXXX to any number that NordVPN has that you get when you log in from Windows or Linux you should see these numbers and then you can just change the number part if you are using us = USA or here is a sample UK one - uk1818.nordvpn.com</span>
 <br><br>
 <h2 style="text-align: left;">Save</h2>
 
@@ -128,15 +129,14 @@ subtitle: Created by Brian Robert Nokes 2023
 <span style="display:block; background-color:red; width:100%; height:2px;"></span>
 
 <h1 style="text-align: left;">Step 5</h1>
+<h5 style="text-align: left;">Firewall/NAT/Outbound</h5>
 <span style="text-align: left;">When putting it on a VLAN or network</span>
 <br><br>
-<h5 style="text-align: left;">Firewall/NAT/Outbound</h5>
-<span style="display: inline-block; margin: 0 50px 0 50px">Mappings</span>
-<br><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">Create / Add a new one</span><br>
+<h3 style="text-align: left;">Mappings</H3>
+<span style="text-align: left;">Create / Add a new one</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">Edit Advanced Outbound NAT Entry</span>
 <br><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">Interface</span><br>
+<span style="text-align: left;">Interface</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">WG_NORDVPN_NORDLYNX</span>
 <br><br>
 <span style="text-align: left;">Protocol</span><br>
@@ -348,7 +348,7 @@ subtitle: Created by Brian Robert Nokes 2023
 <br><br>
 <span style="text-align: left;">Direction</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">out</span><br>
-<span style="display: inline-block; margin: 0 50px 0 50px">if you are going to use gateway under Advanced Options nordvpn then this should be out, if you are going to use gateway default then this can be any</span>
+<span style="display: inline-block; margin: 0 50px 0 70px">If you are going to use gateway under Advanced Options nordvpn then this should be out, if you are going to use gateway default then this can be any</span>
 <br><br>
 <span style="text-align: left;">Protocol</span><br>
 <span style="display: inline-block; margin: 0 50px 0 50px">Any</span>
