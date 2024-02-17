@@ -21,6 +21,7 @@ author: Brian Robert Nokes 1979 - Present
 
 navbar-links:
   About Me: 'aboutme'
+  Brian Nokes Main Page: 'https://github.com/briannokes/briannokes'
   Coursera Portfolio Showcase:
     - Play It Safe Manage Security Risks Course 2 - Control and Compliance Checklist: 'Coursera-GCPC-PlayItSafe-ManageSecurityRisks-Course2-ControlsAndComplianceChecklist-Categories-Recommendations'
 # Author's home: "https://deanattali.com"
@@ -111,7 +112,7 @@ feed_show_excerpt: true
 feed_show_tags: true
 
 # Add a search button to the navbar
-post_search: true
+post_search: false
 
 # Add a button in the footer to edit the current page. Only works if your website is hosted on GitHub
 edit_page_button: true
