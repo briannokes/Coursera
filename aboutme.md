@@ -18,4 +18,4 @@ As a journeyman technician, I have a diverse skill set that includes proficiency
 
 Explore my projects and let's connect, feel free to connect with me on [LinkedIn](https://chat.openai.com/c/linkedin.com/in/brian-n-20162377) or reach out via email at bnokesresume@gmail.com.
 
-Check out my GitHub projects some at Coursera Portfolio Showcase website [GitHub Coursera Portfolio Showcase](https://briannokes.github.io/Coursera/) and See my [Step-By-Step Guides](https://briannokes.github.io/Step-by-Step-Guides/)
+Check out my GitHub projects some at Coursera Portfolio Showcase website [Coursera Portfolio Showcase](https://briannokes.github.io/Coursera/) and See my [Step-By-Step Guides](https://briannokes.github.io/Step-by-Step-Guides/)
